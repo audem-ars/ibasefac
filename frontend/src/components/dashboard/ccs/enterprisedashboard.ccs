@@ -1,0 +1,130 @@
+.enterprise-dashboard {
+    /* Custom styles for the dashboard container */
+    --primary-color: #4F46E5;
+    --secondary-color: #10B981;
+    --accent-color: #F59E0B;
+    --error-color: #EF4444;
+    --success-color: #10B981;
+}
+
+/* Enhanced card hover effects */
+.enterprise-dashboard .chakra-card {
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.enterprise-dashboard .chakra-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Gradient text effects */
+.enterprise-dashboard .gradient-heading {
+    background: linear-gradient(to right, var(--primary-color), #8B5CF6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Custom chart styles */
+.enterprise-dashboard .recharts-wrapper {
+    font-family: inherit;
+}
+
+.enterprise-dashboard .recharts-tooltip {
+    background-color: rgba(255, 255, 255, 0.95) !important;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Quick access button styles */
+.enterprise-dashboard .quick-access-button {
+    transition: all 0.2s ease-in-out;
+}
+
+.enterprise-dashboard .quick-access-button:hover {
+    transform: translateY(-2px);
+}
+
+/* Custom metric card styles */
+.enterprise-dashboard .metric-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.enterprise-dashboard .metric-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.enterprise-dashboard .metric-card:hover::after {
+    opacity: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .enterprise-dashboard {
+        padding: 1rem;
+    }
+    
+    .enterprise-dashboard .chakra-simple-grid {
+        gap: 1rem;
+    }
+}
+
+/* Dark mode adjustments */
+[data-theme="dark"] .enterprise-dashboard {
+    --primary-color: #6366F1;
+    --secondary-color: #34D399;
+    --accent-color: #FBBF24;
+}
+
+/* Animation effects */
+.enterprise-dashboard .animate-fade-in {
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Progress bar customization */
+.enterprise-dashboard .chakra-progress {
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Tab customization */
+.enterprise-dashboard .chakra-tabs__tab {
+    transition: all 0.2s ease-in-out;
+}
+
+.enterprise-dashboard .chakra-tabs__tab:hover {
+    background-color: rgba(var(--primary-color), 0.1);
+}
+
+/* Alert styling */
+.enterprise-dashboard .chakra-alert {
+    border-radius: 8px;
+}
+
+/* Stats customization */
+.enterprise-dashboard .chakra-stat {
+    transition: transform 0.2s ease-in-out;
+}
+
+.enterprise-dashboard .chakra-stat:hover {
+    transform: scale(1.02);
+}
