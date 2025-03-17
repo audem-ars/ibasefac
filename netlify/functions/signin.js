@@ -15,7 +15,7 @@ exports.handler = async function(event, context) {
       // generate tokens, etc. - similar to what your backend was doing
       
       // For example:
-      if (email === "user@example.com" && password === "password123") {
+      if (email === "test@example.com" && password === "testpassword123") {
         return {
           statusCode: 200,
           body: JSON.stringify({ 
