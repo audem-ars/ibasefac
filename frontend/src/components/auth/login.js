@@ -31,7 +31,7 @@ export const Login = ({ onLoginSuccess }) => {
             localStorage.removeItem('user_data');
             setDebugInfo(prev => prev + '\nCleared existing tokens');
 
-            const response = await fetch('http://localhost:5001/api/auth/login', {
+            const response = await fetch('/.netlify/functions/signin', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

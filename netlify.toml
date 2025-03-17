@@ -1,6 +1,12 @@
 [build]
   command = "cd frontend && npm install && npm run build"
   publish = "frontend/build"
+  functions = "netlify/functions"  # Add this line
+
+[[redirects]]
+  from = "/api/*"  # Add this new redirect block
+  to = "/.netlify/functions/:splat"
+  status = 200
 
 [[redirects]]
   from = "/*"
